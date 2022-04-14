@@ -82,8 +82,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
+    else:
+        await message.channel.send('Hello!')
     # TODO: replace this with your code
 
 
-client.run(os.eviron['DISCORD_TOKEN'])
+if __name__ == "__main__":
+    client.run(os.environ['DISCORD_TOKEN'])
